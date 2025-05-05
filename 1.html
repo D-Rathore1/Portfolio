@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My E-Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>   
+<body>
+  <div class="background-overlay"></div>
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="mailto:rathoredinesh046@gmail.com" target="_blank" title="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://github.com/D-Rathore1" target="_blank" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+<!--   <a href="https://www.linkedin.com/in/anushk-barmola-461638249/" target="_blank" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a> -->
+  </div>
+  
+
+  <!-- Landing Section -->
+  <section class="landing">
+    <h1>DINESH RATHORE</h1>
+  </section>
+
+  <!-- Scrollable Content Section -->
+  <section class="content">
+    <a href="#about" class="tile">
+      <h2>About Me</h2>
+      <p>Why do you want to know me?</p>
+    </a>
+    <a href="#twenty-questions" class="tile">
+      <h2>20 Questions!!</h2>
+      <p>PESE</p>
+    </a>
+    
+    <a href="#projects" class="tile">
+      <h2>My Projects</h2>
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="glass-tile">
+    <h2>About Me</h2>
+    <p>Write something interesting about yourself here.</p>
+  </section>
+
+  <!-- 20 Questions Section -->
+  <section id="twenty-questions" class="glass-tile">
+    <h2>20 Questions</h2>
+    <p>The 20  pese questions.</p>
+    <video width="100%" height="auto" controls>
+    <source src="videos/20questions.mp4" type="video/mp4">
+    </video>
+  </section>
+  
+  <div id="myModal" class="modal" style="display:none;">
+    <div class="modal-content" style="
+      background: rgb(255, 255, 255);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: 100px auto;
+      position: relative;
+      text-align: center;">
+      <span class="close" onclick="closeModal()" style="
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 28px;
+        cursor: pointer;">&times;</span>
+      <p>This is a modal popup!</p>
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <section id="projects" class="glass-tile">
+    <h2>My Projects</h2>
+    <p>Showcase your work, GitHub links, images, or short descriptions here.</p>
+  </section>
+  <!-- <script src="script.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,219 @@
+/* ===== Custom Fonts ===== */
+@font-face {
+    font-family: 'Helloworld';
+    src: url('fonts/Helloworld.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Mouldy';
+    src: url('fonts/Mouldy.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'BornToRide';
+    src: url('fonts/BornToRide.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Breakable';
+    src: url('fonts/Breakable.ttf') format('truetype');
+  }
+  
+  /* ===== Global Reset ===== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: url('images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* ===== Background Blur Layer ===== */
+  .background-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    z-index: -1;
+    transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+  }
+  /* ===== Landing Section ===== */
+  .landing {
+    height: 100vh;
+    background: url('images/bg1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+    transition: background 1s ease-out;
+  }
+  
+  .landing h1 {
+    font-family: 'BornToRide', sans-serif;
+    font-size: 200px;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* ===== Tile Section ===== */
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 60px 20px;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    transition: backdrop-filter 0.6s ease, -webkit-backdrop-filter 0.6s ease;
+  }
+  
+  .content.blurred {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .tile {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px;
+    width: 90%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+  }
+  
+  .tile h2 {
+    font-size: 48px;
+    color: white;
+  }
+  
+  .tile p {
+    font-size: 20px;
+    color: white;
+  }
+  
+  .tile:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ===== Glass Tile Section ===== */
+  .glass-tile {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 800px;
+    width: 90%;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+  
+  .glass-tile h2 {
+    font-family: 'Breakable', sans-serif;
+    font-size: 64px;
+    margin-bottom: 30px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .glass-tile p {
+    font-size: 24px;
+    color: white;;
+    line-height: 1.8;
+  }
+  
+  /* ===== Responsive Breakpoints ===== */
+  @media (max-width: 1024px) {
+    .landing h1 {
+      font-size: 120px;
+    }
+  
+    .tile h2 {
+      font-size: 40px;
+    }
+  
+    .tile p {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .landing h1 {
+      font-size: 80px;
+    }
+  
+    .tile h2 {
+      font-size: 32px;
+    }
+  
+    .tile p {
+      font-size: 16px;
+    }
+  
+    .glass-tile p {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .landing h1 {
+      font-size: 50px;
+    }
+  
+    .tile h2 {
+      font-size: 28px;
+    }
+  
+    .tile p {
+      font-size: 14px;
+    }
+  
+    .glass-tile p {
+      font-size: 16px;
+    }
+  }
+  .social-icons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 32px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.3);
+    color: #00aaff; /* light blue on hover */
+  }
+
+  .landing {
+    height: 100vh;
+    background: url('images/bg1.jpg') no-repeat center center fixed;
+    background-size: cover;
+   
+  }
+  
